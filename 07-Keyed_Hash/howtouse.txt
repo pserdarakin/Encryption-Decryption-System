@@ -1,0 +1,40 @@
+HMAC(key,message,method)
+
+INPUT
+key: input secret key in char
+message: input message in char
+method: hash method, either:
+'SHA-1', 'SHA-256', 'SHA-384', 'SHA-512'
+
+OUTPUT
+HMAC: Hash message authentication code value in upper case HEX.
+
+You must download the DataHash.m function made by Jan Simon in order to use HMAC.m. It can be found here:
+
+http://www.mathworks.com/matlabcentral/fileexchange/31272-datahash
+
+If needed, you can verify your output here:
+
+http://www.freeformatter.com/hmac-generator.html#ad-output
+
+More information on HMAC here:
+
+http://en.wikipedia.org/wiki/Hash-based_message_authentication_code
+
+Cite As
+Peter Grunnet Wang (2022). HMAC Hash Message Authentication Code Function (https://www.mathworks.com/matlabcentral/fileexchange/46182-hmac-hash-message-authentication-code-function), MATLAB Central File Exchange. Retrieved July 5, 2022.
+
+example:
+>> HMAC('secretkey','this is a very secret message','SHA-256')
+
+HMAC uses DataHash:
+
+>> DataHash(int32(1:10), 'short', 'MD5')
+
+but note HMAC only uses SHA
+
+
+
+
+
+

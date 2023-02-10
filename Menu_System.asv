@@ -1,0 +1,54 @@
+clc;clear;
+while 1
+    choice = menu("Options for Crypted Files",'Classic Cipher','One-way pad','Bit-wise XOR cipher(text)','Bit-wise XOR cipher(Binary)','DES Block Cipher','Bit-wise Stream Cipher','Hash Password','Keyed Hash','Authenticated Encrypt (GCM) ','Metrics\Stats function menu option','RSA','DH Key Generator','EC Key Generator','Exit');
+    
+    switch choice
+        case 1
+            addpath('01-Cipher/')
+            cipher()
+        case 2
+            addpath('02-OTP/')
+            onetimepad()
+        case 3
+            addpath('03-XOR/')
+            XOR()
+        case 4
+            addpath('03-XOR/')
+            bitwiseXORBinary()
+        case 5
+            addpath('04-DES/')
+            DES1()
+        case 6
+            addpath('05-Test Rig/')
+            Test_Rig()
+        case 7
+            addpath('06-Hash/')
+            hash()
+        case 8
+            addpath('07-Keyed_Hash/')
+            HMAC()
+        case 9
+            addpath('08-GCM/')
+            main()
+        case 10
+            addpath('09-Metrics/')
+            Metrics()
+        case 11
+            addpath('10-RSA/')
+            rsa()
+        case 12
+            addpath('11-DC_EC/DiffieHellman/')
+            DHKey()
+        case 13
+            addpath('11-DC_EC/ECC/')
+            secp256k1_GUI()
+        case 14
+            choice = menu("Exit?",'Yes','No')
+            
+            switch choice
+                case 1
+            break
+            end
+        
+    end
+end
